@@ -2,13 +2,15 @@ require 'test_helper'
 
 class BasicPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
-    get basic_pages_home_url
+    get root_path
     assert_response :success
+    assert_select "title", "Todo App"
   end
 
   test "should get help" do
-    get basic_pages_help_url
+    get help_path
     assert_response :success
+    assert_select "title", "Help | Todo App"
   end
 
 end
