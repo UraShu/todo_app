@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_10_19_041846) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.string "remember_digest"
-    t.index "\"eamil\"", name: "index_users_on_eamil", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
